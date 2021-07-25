@@ -1,6 +1,6 @@
 # Gestion Libreria
 
-[Visitalo](https://front-libreria.netlify.app/login)
+[Visitalo](https://front-libreria.netlify.app)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
