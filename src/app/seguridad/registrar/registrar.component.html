@@ -1,0 +1,39 @@
+<section>
+  <form fxLayout='column' fxLayoutAlign='center center' fxLayoutGap="10px" #f="ngForm" (ngSubmit)="registrarUsuario(f)">
+
+    <mat-form-field>
+      <mat-label>Ingrese Nombre</mat-label>
+      <input type="text" ngModel name="nombre" required placeholder="Ingrese su Nombre" matInput>
+      <mat-error>Debe ingresar un nombre</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese Apellidos</mat-label>
+      <input type="text" ngModel name="apellidos" required placeholder="Ingrese sus apellidos" matInput>
+      <mat-error>Debe ingresar los apellidos</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese Username</mat-label>
+      <input type="text" ngModel name="username" required placeholder="Ingrese username" matInput>
+      <mat-error>Debe ingresar un username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese E-Mail</mat-label>
+      <input type="email" matInput placeholder="email@email.com" ngModel name="email" email required #emailInput="ngModel"/>
+      <mat-error *ngIf="emailInput.hasError('required')">El email no puede estar vacio</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">El email es invalido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field hintLabel="El password debe tener 7 caracteres">
+      <mat-label>Ingrese Password</mat-label>
+      <input type="password" matInput placeholder="Ingresa Password" ngModel name="password" required minlength="7"/>
+      <mat-error>El password debe tener más de 7 caracteres</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Guardar</button>
+  </form>
+</section>
+
+
