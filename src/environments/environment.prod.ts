@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://librerianodeangular.herokuapp.com',
+  baseUrl: 'https://front-libreria.netlify.app/',
 };
